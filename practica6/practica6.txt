@@ -1,0 +1,34 @@
+AUTORES:
+
+Jesus Angel Perez-Roca Fernandez (infjpf02)
+Jose Antonio Pereira Suarez (infjps00)
+
+Esta practica esta realizada con el lex y el yacc del servidor alba. Puede que para que funcione en otros servidores haya que introducir espacios entre las lineas del codigo.
+
+La gramatica utilizada en esta practica esta basada en las expresiones regulares:
+
+a) Un terminal solo ('a','b' o 'c') es una expresion regular.
+
+b) El cierre de una expresion regular ('*') es expresion regular. 
+
+c) La union de expresiones regulares ('+') es expresion regular.
+
+d) La concatenacion de expresiones regulares ('.') es expresion regular.
+
+e) Una expresion regular entre parentesis tambien es expresion regular.
+
+Las expresiones regulares no necesitan terminar con un simbolo de dolar porque, al igual que en la practica 4, solo acepta una cadena por linea.
+
+El analizador lexico que definimos lo unico que hace es ir leyendo caracter a caracter la entrada y se los va pasando al parser. 
+
+Tambien es el encargado de salir del programa cuando se pulsa Enter sin haber introducido ninguna cadena.
+
+Para los ejemplos, valen los mismos que los de la practica 3, que tambien estaba basada en las expresiones regulares:
+
+a) a+b.c*
+
+b) ab+c.a
+
+c) a.d+c
+
+El programa diria que a) es una entrada valida mientras que las otras dos no son validas.

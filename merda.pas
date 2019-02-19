@@ -1,0 +1,3 @@
+program merda;
+begin
+end.

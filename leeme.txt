@@ -1,0 +1,84 @@
+/*****************************************************************************/
+/********************* PRACTICA DE COMPILADORES ******************************/
+/***************************REALIZADA POR:************************************/
+/**************JESUS ANGEL PEREZ-ROCA FERNANDEZ (infjpf02)********************/
+/****************JOSE ANTONIO PEREIRA SUAREZ (infjps00)***********************/
+/*****************************************************************************/
+
+Esta practica es un traductor de pascal a C que admite las siguientes estructuras:
+
+-Declaracion de variables
+	Pueden ser de tipo integer o boolean(al traducir a C, los dos tipos seran int,
+	ya que C no tiene tipo booleano)
+	El formato que debe tener es:
+	var
+	i,j :integer;
+	b : boolean;
+
+-Sentencia if-then-else
+	El formato que debe tener es:
+	if condicion then
+	sentencia
+	else
+	sentencia;
+	
+	Donde 'sentencia' puede ser tanto una sola sentencia, como un bloque 'begin'.
+
+-Sentencia for
+	El formato que debe tener es:
+	for variable := valor_inicial {downto|to} valor_final do
+	sentencia;
+	
+	Donde 'sentencia' puede ser tanto una sola sentencia, como un bloque 'begin'.
+	Tanto 'valor_inicial' como 'valor_final' deben ser o bien enteros o variables 'integer'.
+
+-Sentencia while
+	El formato que debe tener es:
+	while condicion do
+	sentencia;
+	
+	Donde 'sentencia' puede ser tanto una sola sentencia, como un bloque 'begin'.
+
+-Sentencia repeat
+	El formato que debe tener es:
+	repeat
+	sentencia;
+	until condicion;
+	
+	Donde 'sentencia' puede ser tanto una sola sentencia,
+	como varias(no hace falta poner un bloque 'begin').
+
+-Asignaciones de variables
+	El formato que debe tener es:
+	variable := expresion;
+
+	Donde 'expresion' puede ser otra variable del mismo tipo, un valor del mismo tipo
+	o bien una combinacion de las anteriores por medio de las operaciones de su tipo.
+
+	Las operaciones para el tipo integer son: +, -, *, /, div y mod.
+
+	Las operaciones para el tipo bool son: and, or y expresiones del tipo 
+	variable_integer operador valor (donde operador es <, >, <=, >=, =, <>).
+
+-Comentarios
+	El formato que debe tener es:
+	{ Esto es un comentario }
+	{ Esto
+	tambien lo es }
+	
+	Las llaves pueden sustituirse por (* y *);
+
+Para ejecutar la practica primero hay que compilarla: 
+	Por ejemplo, gcc p2c.c -o p2c
+Luego puede ejecutarse en varios modos por medio de la redireccion de entrad y salida:
+-Leer de pantalla y escribir de pantalla: p2c
+-Leer de pantalla y escribir en fichero: p2c > salida.c
+-Leer de fichero y escribir en pantalla: p2c < entrada.pas
+-Leer de fichero y escribir en fichero: p2c < entrada.pas > salida.c
+
+Para su prueba, se adjunta u fichero entrada.pas que contiene las estructuras basicas.
+
+El programa, ante un fallo, dice la linea que fallo y el motivo. Si no hay fallo dice las lineas que tradujo.
+
+NOTA: Los espacios en blanco entre los tokens son IMPORTANTES, si no puede
+fallar.

@@ -1,0 +1,56 @@
+AUTORES:
+
+Jesus Angel Perez-Roca Fernandez (infjpf02)
+Jose Antonio Pereira Suarez (infjps00)
+
+La gramatica utilizada en esta practica es la siguiente:
+
+S->AaA
+A->bB
+B->Ac
+B->cd
+
+La tabla de precedencia simple de esta gramatica es asi:
+
+	S	A	B	a	b	c	d
+
+S							
+
+A				=		=	
+
+B				>		>	
+
+a		=			<	<	
+
+b		<	=		<	<	
+
+c				>		>	=
+
+d				>		>	
+
+
+El programa hace lo siguente:
+
+1) Lee toda la entrada (no hace falta poner un simbolo de dolar al final porque solo admite una entrada por linea).
+
+2) Muestra la entrada con las relaciones existentes entre los caracteres que la componen (si no existe un relacion entre algun par pone un espacio).
+
+3) Muestra el pivote.
+
+4) Sustituye el pivote y vuelve a mostrar lo que queda con las relaciones correspondientes.
+
+5) Sigue haciendo esto hasta que tiene como pivote <S> o hay un error (algun espacio en blanco en la cadena).
+
+6) Por ultimo dice si la entrada es valida o no.
+
+Para salir del programa, al igual que en las practicas anteriores basta con pulsar Enter sin introducir ningun caracter.
+
+Ejemplos:
+
+a) bcdabcd ----> Entrada valida
+
+b) bcdcabc ----> Entrada no valida
+
+c) bebcdaf ----> Entrada no valida
+
+d) bbccabcd ---> Entrada valida

@@ -1,0 +1,66 @@
+AUTORES:
+
+Jesus Angel Perez-Roca Fernandez (infjpf02)
+Jose Antonio Pereira Suarez (infjps00)
+
+La gramatica utilizada en esta practica es la siguiente:
+
+1  E->RST
+2  T->'*'
+3  T->'epsilon'
+4  S->'+'RS
+5  S->'epsilon'
+6  R->PQ
+7  Q->'.'PQ
+8  Q->'epsilon'
+9  P->'('E')'
+10 P->'a'
+11 P->'b'
+12 P->'c'
+
+La tabla para mirar las acciones a realizar segun el caracter leido y el simbolo que esta en la pila es la siguiente:
+
+	$	a	b	c	(	)	+	.	*
+
+E		1	1	1	1
+
+S	5					5	4		5
+
+R		6	6	6	6
+
+Q	8					8	8	7	8
+
+P		10	11	12	9
+
+T	3					3			2
+
+Esta gramatica esta basada en las expresiones regulares:
+
+a) Un terminal solo ('a','b' o 'c') es una expresion regular.
+
+b) El cierre de una expresion regular ('*') es expresion regular. 
+NOTA: Tal y como definimos la gramatica el '*' solo puede estar al final de la expresion asi que no se corresponde totalmente con el cierre "normal".
+
+c) La union de expresiones regulares ('+') es expresion regular.
+
+d) La concatenacion de expresiones regulares ('.') es expresion regular.
+
+e) Una expresion regular entre parentesis tambien es expresion regular.
+
+Cada expresion regular debe terminar con un dolar.
+
+Se pueden introducir varias expresiones en una misma linea.
+
+Por todo ello, los ejemplos para probarla serian expresiones regulares. Por ejemplo:
+
+a) (a+b)*.c$abc$a+d$
+
+b) (a+b)*.c$
+   abc$
+   a+d$
+
+a) y b) serian equivalentes y darian como resultado que la primera es expresion regular y la otras dos no.
+
+La pila esta implementada con un array normal y una variable que indica la posicion de la cabeza de la pila. 
+
+De esta forma un borrado de la pila solo implica disminuir en uno la posicion de la cabeza.

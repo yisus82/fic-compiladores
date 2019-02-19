@@ -1,0 +1,60 @@
+AUTORES:
+
+Jesus Angel Perez-Roca Fernandez (infjpf02)
+Jose Antonio Pereira Suarez (infjps00)
+
+La gramatica utilizada en esta practica es la siguiente:
+
+S->CC
+C->cC
+C->d
+
+La tabla LR-canonico para esa gramatica es:
+
+	c	d	$	||	S	C
+				||		
+0	d3	d4		||	1	2
+				||		
+1			ACEPTAR ||		
+				||		
+2	d6	d7		||		5
+				||		
+3	d3	d4		||		8
+				||		
+4	r3	r3		||		
+				||		
+5			r1	||		
+				||		
+6	d6	d7		||		9
+				||		
+7			r3	||		
+				||		
+8	r2	r2		||		
+				||		
+9			r2	||		
+				||		
+
+El programa va leyendo caracter a caracter la entrada, que esta terminada por un dolar.
+
+Pueden introducirse varias entradas en una misma linea.
+
+Segun el caracter leido y el estado en que se encuentre mira la posicion de la tabla y realiza la accion correspondiente.
+
+La pila esta implementada con un array normal y una variable que indica la posicion de la cabeza de la pila. 
+
+De esta forma un borrado de la pila solo implica disminuir en uno la posicion de la cabeza.
+
+Si la entrada la admite la gramatica muestra un mensaje de "Entrada valida".
+
+Si se produce un error muestra "Entrada no valida".
+
+Ejemplos:
+
+a) ccccdd$cd$abcd$
+
+b) ccccdd$
+   cd$
+   abcd$
+
+a) y b) serian equivalentes y mostraria que la primera es una entrada valida y las otras dos no.
+

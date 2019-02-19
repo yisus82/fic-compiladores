@@ -1,0 +1,69 @@
+AUTORES:
+
+Jesus Angel Perez-Roca Fernandez (infjpf02)
+Jose Antonio Pereira Suarez (infjps00)
+
+AUTOMATA PROGRAMADO
+===================
+
+Tenemos una tabla de simbolos donde se van guardando la parte entera, la parte decimal y el exponente de las entradas validas.
+
+Esta tabla se muestra al salir del programa, es decir, al darle a Enter sin introducir ningun caracter.
+
+El programa lo que hace es ir leyendo caracter a caracter hasta encontrar un dolar. Con cada caracter, y dependiendo del estado en que se encuentre, realiza unas operaciones u otras sobre una variable en la que se encuentra almacenado el valor del numero introducido hasta el momento.
+
+Cada entrada para ser valida debe terminar con un simbolo de dolar y se pueden introducir varias entradas en una misma linea. Por ejemplo: 
+
+a) 1.23$12$-1e-3$
+
+b) 1.23$
+   12$
+   -1e-3$
+
+a) y b) serian equivalentes.
+
+La 'e' del exponente puede ponerse tambien en mayusculas ('E').
+
+En caso de que una entrada sea valida, a parte de meterla en la tabla de simbolos (que tiene capacidad para 100 entradas), la muestra por pantalla en el siguiente formato [-]d.ddddE[-]dd.
+
+En caso de que haya un error saldra por pantalla un mensaje de "Entrada no valida".
+
+Puede que, aunque el numero sea valido, si es demasiado grande, lo muestre mal debido a que la variable utilizada para almacenarlo no pueda almacenar valores tan grandes.
+
+
+TABLA COMPACTA
+==============
+
+Tenemos una tabla de simbolos donde se van guardando la parte entera, la parte decimal y el exponente de las entradas validas.
+
+Esta tabla se muestra al salir del programa, es decir, al darle a Enter sin introducir ningun caracter.
+
+El programa lo que hace es ir leyendo caracter a caracter hasta encontrar un dolar. Con cada caracter, y dependiendo del estado en que se encuentre, realiza unas operaciones u otras sobre una variable en la que se encuentra almacenado el valor del numero introducido hasta el momento.
+
+Cada entrada para ser valida debe terminar con un simbolo de dolar y se pueden introducir varias entradas en una misma linea. Por ejemplo: 
+
+a) 1.23$12$-1e-3$
+
+b) 1.23$
+   12$
+   -1e-3$
+
+a) y b) serian equivalentes.
+
+La 'e' del exponente puede ponerse tambien en mayusculas ('E').
+
+En caso de que una entrada sea valida, a parte de meterla en la tabla de simbolos (que tiene capacidad para 100 entradas), la muestra por pantalla en el siguiente formato [-]d.ddddE[-]dd.
+
+En caso de que haya un error:
+
+a) Si se han introducido dos o mas puntos en el numero, entonces mostrara un mensaje advirtiendo de ello, ademas de decir que la entrada no es valida.
+
+b) Si se han introducido algun punto en el exponente, entonces mostrara un mensaje advirtiendo de ello, ademas de decir que la entrada no es valida.
+
+c) Si se han introducido dos o mas 'e' (o 'E'), entonces mostrara un mensaje advirtiendo de ello, ademas de decir que la entrada no es valida.
+
+d) Si ocurre cualquier otro error solo mostrara el mensaje de "Entrada no valida".
+
+Puede que, aunque el numero sea valido, si es demasiado grande, lo muestre mal debido a que la variable utilizada para almacenarlo no pueda almacenar valores tan grandes.
+
+La estructura de este programa es analoga a la del automata programado, solo que el cambio de estado se realiza tras mirar en la tabla compacta a que estado tiene que ir.

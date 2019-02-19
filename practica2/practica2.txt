@@ -1,0 +1,32 @@
+AUTORES:
+
+Jesus Angel Perez-Roca Fernandez (infjpf02)
+Jose Antonio Pereira Suarez (infjps00)
+
+Esta practica esta realizada con el lex del servidor alba. Puede que para que funcione en otros servidores haya que introducir espacios entre las lineas del codigo.
+
+En esta practica lo unico que se hace es comprobar que el numero tiene el formato adecuado especificado por la expresion regular.
+
+En este caso, al contrario que en la practica 1, solo se reconoce el numero, no se realizan acciones sobre el y se muestra tal y como se ha introducido por pantalla.
+
+Si encaja en la expresion regular se imprime la entrada (sin el simbolo de dolar del final) y se dice que es un numero valido.
+
+En cualquier otro caso, es decir, si ocurre un error, muestra "Entrada no valida" por pantalla.
+
+Para que una entrada sea valida debe tener un dolar al final.
+
+Al igual que en la practica 1 los numeros decimales con parte entera 0 pueden ponerse sin el 0.
+
+Se pueden introducir varias entradas en una misma linea. Por ejemplo:
+
+a) -4.32e-2$2.76$.3$
+
+b) -4.32e-2$
+   2.76$
+   .3$
+
+a) y b) serian equivalentes.
+
+El simbolo de exponente puede ser tanto 'e' como 'E'.
+
+Para salir del programa hay que presionar Enter sin introducir ningun caracter.
